@@ -26,18 +26,26 @@
 
 
 
-<form class = "newbook">
 
-<% if @book.errors.any? %>
-    <%= @book.errors.count %>件のエラーが発生しました
-    <ul>
-        <% @book.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-        <% end %>
-    </ul>
-<% end %>
     
-<%= form_with model:@book,url: '/books',method: :post do |f| %>
+<%= form_with model: @book do |f| %>
+
+    <% if @book.errors.any? %>
+        <div id = "error_explanation">
+            <h2><%= pluralixe(@book.error.count,"error") %> prohibited this user form being saved:</h2>
+        
+        <ul>
+            <% @book.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+            <% end %>
+        </ul>
+        </div>
+    
+    <% end %>
+    
+    
+    
+
 
 <h2>New Book</h2>
 
@@ -55,5 +63,3 @@
 </div>
 
 <% end %>
-
-</form>
