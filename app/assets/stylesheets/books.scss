@@ -22,8 +22,26 @@ h2{
   margin: 18px 0;
 }
 
-.notice{
+.notice p{
   color: green;
+}
+
+.error_explanation h2{
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px -7px 0;
+  background-color: red;
+  color: white;
+}
+
+.error_explanation{
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
 }
 
 th{
@@ -42,3 +60,22 @@ td{
   margin-bottom: 10px;
 }
 
+.error_explanation ul li{
+  font-size: 12px;
+  list-style: square;
+}
+
+ul{
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+}
+
+li{
+  display: list-item;
+  text-align: -webkid-match-parent;
+}
